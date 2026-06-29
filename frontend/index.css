@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foxi-bg: #FFFFFF;
+  --foxi-bg-secondary: #F8FAFC;
+  --foxi-bg-tertiary: #F1F5F9;
+  --foxi-text: #0F172A;
+  --foxi-text-secondary: #475569;
+  --foxi-text-muted: #94A3B8;
+  --foxi-navy: #0A2540;
+  --foxi-blue: #1D4ED8;
+  --foxi-teal: #0F766E;
+  --foxi-amber: #D97706;
+  --foxi-positive: #059669;
+  --foxi-negative: #DC2626;
+  --foxi-border: #E2E8F0;
+  --foxi-border-hover: #CBD5E1;
+}
+
+html, body {
+  margin: 0;
+  background: var(--foxi-bg);
+  color: var(--foxi-text);
+  font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "cv11";
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: 'Manrope', 'IBM Plex Sans', system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono, code, pre {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+::selection {
+  background: var(--foxi-navy);
+  color: white;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 50% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 50% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 50% 15%;
+    --primary: 215 80% 15%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 50% 15%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 215 50% 15%;
+    --destructive: 0 73% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 215 80% 15%;
+    --chart-1: 215 80% 15%;
+    --chart-2: 224 76% 48%;
+    --chart-3: 171 78% 26%;
+    --chart-4: 27 87% 44%;
+    --chart-5: 215 16% 47%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
+
+/* Subtle reveal animation */
+@keyframes foxi-fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.foxi-reveal { animation: foxi-fade-up 0.6s ease-out both; }
+.foxi-reveal-delay-1 { animation-delay: 0.08s; }
+.foxi-reveal-delay-2 { animation-delay: 0.16s; }
+.foxi-reveal-delay-3 { animation-delay: 0.24s; }
+.foxi-reveal-delay-4 { animation-delay: 0.32s; }
+
+/* Ticker bar */
+@keyframes foxi-ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.foxi-ticker { animation: foxi-ticker 60s linear infinite; }
+
+/* Number rolling subtle */
+.foxi-num { font-variant-numeric: tabular-nums; }
+
+/* Slider track */
+.foxi-slider-track {
+  height: 4px;
+  background: var(--foxi-bg-tertiary);
+  border-radius: 999px;
+  position: relative;
+}
+
+/* Grid background */
+.foxi-grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@layer base {
+  [data-debug-wrapper="true"] { display: contents !important; }
+  [data-debug-wrapper="true"] > * {
+    margin: inherit; padding: inherit; gap: inherit;
+    border-width: inherit; border-style: inherit; border-color: inherit;
+  }
+}

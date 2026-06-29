@@ -1,0 +1,25 @@
+.App {
+  text-align: left;
+  min-height: 100vh;
+  background: #FFFFFF;
+}
+
+/* Recharts axis tweaks */
+.recharts-cartesian-axis-tick-value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  fill: #64748B;
+}
+
+.recharts-default-tooltip {
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 14px rgba(15,23,42,0.06) !important;
+  font-family: 'IBM Plex Sans', sans-serif !important;
+}
+
+.recharts-tooltip-label {
+  color: #0A2540 !important;
+  font-weight: 600 !important;
+  font-family: 'Manrope', sans-serif !important;
+}
