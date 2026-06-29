@@ -1,0 +1,107 @@
+{
+  "theme": "light",
+  "archetype": "4 (Swiss & High-Contrast)",
+  "design_philosophy": "Institutional, trusted, data-driven, educational, high-contrast, clear information hierarchy. Avoids retail forex aesthetics, trading/gambling visuals, and neon colors. Emphasizes authority and transparency.",
+  "colors": {
+    "background": {
+      "primary": "#FFFFFF",
+      "secondary": "#F8FAFC",
+      "tertiary": "#F1F5F9"
+    },
+    "text": {
+      "primary": "#0F172A",
+      "secondary": "#475569",
+      "muted": "#94A3B8"
+    },
+    "accent": {
+      "primary": "#0A2540",
+      "secondary": "#1D4ED8",
+      "positive": "#059669",
+      "negative": "#DC2626",
+      "warning": "#D97706"
+    },
+    "border": {
+      "default": "#E2E8F0",
+      "hover": "#CBD5E1",
+      "dark": "#94A3B8"
+    },
+    "charts": [
+      "#0A2540",
+      "#1D4ED8",
+      "#0F766E",
+      "#D97706",
+      "#64748B"
+    ]
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Manrope",
+      "body": "IBM Plex Sans",
+      "mono": "IBM Plex Mono"
+    },
+    "rules": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tighter text-[#0A2540] leading-tight",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#0F172A] leading-tight",
+      "h3": "text-xl sm:text-2xl font-semibold tracking-tight text-[#0F172A]",
+      "h4": "text-lg sm:text-xl font-medium tracking-tight text-[#0F172A]",
+      "body": "text-base leading-relaxed text-[#475569]",
+      "small_label": "text-sm uppercase tracking-[0.2em] font-semibold text-[#64748B]"
+    }
+  },
+  "spacing_and_layout": {
+    "container": "max-w-7xl mx-auto px-6 lg:px-8",
+    "section_padding": "py-16 md:py-24 lg:py-32",
+    "bento_grid": {
+      "marketing": "grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-8",
+      "dashboard": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6"
+    },
+    "card_padding": "p-6 md:p-8",
+    "border_radius": "rounded-lg"
+  },
+  "surfaces_and_components": {
+    "header": {
+      "style": "sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-[#E2E8F0] shadow-sm",
+      "rules": "Ensure navigation links have clear active states and a prominent institutional CTA."
+    },
+    "cards": {
+      "default": "bg-white border border-[#E2E8F0] shadow-sm hover:shadow-md transition-shadow duration-300 rounded-lg",
+      "interactive": "bg-white border border-[#E2E8F0] hover:border-[#0A2540] shadow-sm transition-all duration-200 cursor-pointer rounded-lg"
+    },
+    "buttons": {
+      "primary": "bg-[#0A2540] text-white hover:bg-[#1D4ED8] hover:text-white px-6 py-3 rounded-lg font-medium transition-colors",
+      "secondary": "bg-transparent border border-[#0A2540] text-[#0A2540] hover:bg-[#F8FAFC] px-6 py-3 rounded-lg font-medium transition-colors",
+      "ghost": "bg-transparent text-[#475569] hover:bg-[#F1F5F9] hover:text-[#0F172A] px-4 py-2 rounded-lg transition-colors"
+    },
+    "inputs_and_forms": {
+      "style": "bg-white border border-[#CBD5E1] focus:border-[#0A2540] focus:ring-1 focus:ring-[#0A2540] rounded-md px-4 py-2 w-full text-[#0F172A]"
+    }
+  },
+  "media": {
+    "images": {
+      "hero_office": "https://images.unsplash.com/photo-1637393932938-b9c209e67d5c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZyUyMGFyY2hpdGVjdHVyZXxlbnwwfHx8fDE3ODE1ODk4Mjh8MA&ixlib=rb-4.1.0&q=85",
+      "abstract_data_viz": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGRhdGElMjB2aXN1YWxpemF0aW9ufGVufDB8fHx8MTc4MTU0MDA1N3ww&ixlib=rb-4.1.0&q=85",
+      "financial_district": "https://images.unsplash.com/photo-1689806876080-cde8db3ee99f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwyfHxmaW5hbmNpYWwlMjBkaXN0cmljdCUyMGxpZ2h0fGVufDB8fHx8MTc4MTU4OTgyOHww&ixlib=rb-4.1.0&q=85",
+      "white_marble_bg": "https://images.pexels.com/photos/3847492/pexels-photo-3847492.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "Stroke width 1.5px, consistent sizing (20px or 24px) for data points and navigation."
+    }
+  },
+  "motion_and_interaction": {
+    "hover_effects": "Subtle lifts (-translate-y-1) for interactive cards. Strict color shifts for text links.",
+    "transitions": "Use 'transition-all duration-200 ease-in-out' globally.",
+    "accessibility": "Ensure focus rings are visible. Respect 'prefers-reduced-motion'."
+  },
+  "instructions_to_main_agent": [
+    "Install Google Fonts 'Manrope' for headings and 'IBM Plex Sans' for body text.",
+    "Implement the UI using a stark white and slate grey palette to establish an institutional, trustworthy tone.",
+    "For the 'Intelligent Investor Onboarding', use a multi-step form with clear progress indicators and interactive, data-driven question layouts.",
+    "The 'Portfolio Intelligence Dashboard' must be dense but legible, utilizing the bento grid system with explicit borders and 1px strokes rather than heavy shadows.",
+    "Implement the 'Without FX vs With FOX I FX Strategy' comparison charts using Recharts, using the institutional color palette (Navy vs Teal) to show clear performance deltas.",
+    "The 'Historical Stress Testing' section should feature interactive sliders and timeline charts, emphasizing resilience and risk management.",
+    "The 'AI-Powered Portfolio Narrator' should be designed as a sophisticated side-panel or inline text stream, using a clean monospace font (IBM Plex Mono) for its 'thinking' state to feel analytical.",
+    "Ensure all buttons, form inputs, and key interactive elements have descriptive 'data-testid' attributes (e.g., 'data-testid=\"start-onboarding-btn\"').",
+    "Avoid any retail trading aesthetics like neon green/red candles, large glowing buttons, or 'gamified' elements."
+  ]
+}
